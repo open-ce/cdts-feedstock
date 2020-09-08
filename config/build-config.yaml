@@ -1,0 +1,45 @@
+recipes:
+  - name: zip-cos7-ppc64le
+    path: zip-cos7-ppc64le
+
+  - name: tzdata-java-cos7-ppc64le
+    path: tzdata-java-cos7-ppc64le
+
+  - name: java-1.8.0-openjdk-headless-cos7-ppc64le
+    path: java-1.8.0-openjdk-headless-cos7-ppc64le
+
+  - name: java-1.8.0-openjdk-cos7-ppc64le
+    path: java-1.8.0-openjdk-cos7-ppc64le
+
+  - name: java-1.8.0-openjdk-devel-cos7-ppc64le
+    path: java-1.8.0-openjdk-devel-cos7-ppc64le
+
+  - name: tzdata-java-cos6-x86_64
+    path: tzdata-java-cos6-x86_64
+
+  - name: chkconfig-cos6-x86_64
+    path: chkconfig-cos6-x86_64
+
+  - name: nss-util-cos6-x86_64
+    path: nss-util-cos6-x86_64
+
+  - name: nss-cos6-x86_64
+    path: nss-cos6-x86_64
+
+  - name: nss-softokn-freebl-cos6-x86_64
+    path: nss-softokn-freebl-cos6-x86_64
+
+  - name: nss-softokn-cos6-x86_64
+    path: nss-softokn-cos6-x86_64
+
+  - name: copy-jdk-configs-cos6-x86_64
+    path: copy-jdk-configs-cos6-x86_64
+
+  - name: java-1.8.0-openjdk-headless-cos6-x86_64
+    path: java-1.8.0-openjdk-headless-cos6-x86_64
+
+  - name: java-1.8.0-openjdk-cos6-x86_64
+    path: java-1.8.0-openjdk-cos6-x86_64
+
+  - name: java-1.8.0-openjdk-devel-cos6-x86_64
+    path: java-1.8.0-openjdk-devel-cos6-x86_64

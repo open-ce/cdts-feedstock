@@ -1,0 +1,62 @@
+package:
+  name: java-1.8.0-openjdk-headless-cos7-ppc64le
+  version: 1.8.0.242
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/java-1.8.0-openjdk-headless-1.8.0.242.b08-1.el7.ppc64le.rpm
+    sha256: 6fead74097c2da68abaa84df1566a53950a805a7403f6ff2b4b00736625fdbc9
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 1
+  noarch: generic
+  binary_relocation: False
+  detect_binary_files_with_prefix: False
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - chkconfig-cos7-ppc64le >=1.7
+    - copy-jdk-configs-cos7-ppc64le >=3.3
+    - javapackages-tools-cos7-ppc64le >=3.4.1
+    - nss-cos7-ppc64le >=3.34.0
+    - nss-softokn-cos7-ppc64le >=3.34.0
+    - tzdata-java-cos7-ppc64le >=2009c
+    - ca-certificates-cos7-ppc64le >=2017.2.20
+  host:
+    - chkconfig-cos7-ppc64le >=1.7
+    - copy-jdk-configs-cos7-ppc64le >=3.3
+    - javapackages-tools-cos7-ppc64le >=3.4.1
+    - nss-cos7-ppc64le >=3.34.0
+    - nss-softokn-cos7-ppc64le >=3.34.0
+    - tzdata-java-cos7-ppc64le >=2009c
+    - ca-certificates-cos7-ppc64le >=2017.2.20
+  run:
+    - chkconfig-cos7-ppc64le >=1.7
+    - copy-jdk-configs-cos7-ppc64le >=3.3
+    - javapackages-tools-cos7-ppc64le >=3.4.1
+    - nss-cos7-ppc64le >=3.34.0
+    - nss-softokn-cos7-ppc64le >=3.34.0
+    - tzdata-java-cos7-ppc64le >=2009c
+    - ca-certificates-cos7-ppc64le >=2017.2.20
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: http://openjdk.java.net/
+  license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
+  license_family: GPL2
+  license_file: openjdk-license
+  summary: "(CDT) The OpenJDK runtime environment without audio and video support"
+  description: |
+        The OpenJDK runtime environment without audio and video
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
+
