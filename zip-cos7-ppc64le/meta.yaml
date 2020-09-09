@@ -1,0 +1,42 @@
+package:
+  name: zip-cos7-ppc64le
+  version: 3.0
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/zip-3.0-11.el7.ppc64le.rpm
+    sha256: 6bc905954988220bcf792d60a8c3f92bb67bb55ac266f9815de7253cd610e214
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 1
+  noarch: generic
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  missing_dso_whitelist:
+    - '*'
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: http://www.info-zip.org/Zip.html
+  license: BSD
+  license_family: BSD
+  license_file: LICENSE
+  summary: (CDT) A file compression and packaging utility compatible with PKZIP
+  description: |
+        'The zip program is a compression and file packaging utility.  Zip is analogous
+
+        to a combination of the UNIX tar and compress commands and is compatible with
+
+        PKZIP (a compression and file packaging utility for MS-DOS systems).  Install
+
+        the zip package if you need to compress files using the zip program.
+
+        '
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team

@@ -1,0 +1,47 @@
+package:
+  name: java-1.8.0-openjdk-devel-cos7-ppc64le
+  version: 1.8.0.242
+
+source:
+  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/java-1.8.0-openjdk-devel-1.8.0.242.b08-1.el7.ppc64le.rpm
+    sha256: 25953566448905c312a486048193cf33db283baf20cde3e0829039250394b85d
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 1
+  noarch: generic
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - java-1.8.0-openjdk-cos7-ppc64le ==1.8.0.242
+    - java-1.8.0-openjdk-headless-cos7-ppc64le ==1.8.0.242
+  host:
+    - java-1.8.0-openjdk-cos7-ppc64le ==1.8.0.242
+    - java-1.8.0-openjdk-headless-cos7-ppc64le ==1.8.0.242
+  run:
+    - java-1.8.0-openjdk-cos7-ppc64le ==1.8.0.242
+    - java-1.8.0-openjdk-headless-cos7-ppc64le ==1.8.0.242
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: http://openjdk.java.net/
+  license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
+  license_family: GPL2
+  license_file: openjdk-license
+  summary: (CDT) OpenJDK Development Toolkit
+  description: |
+    The OpenJDK Development Toolkit.
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
+
