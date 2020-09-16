@@ -26,6 +26,9 @@ recipes:
   - name: nss-cos6-x86_64
     path: nss-cos6-x86_64
 
+  - name: nspr-cos6-x86_64
+    path: nspr-cos6-x86_64
+
   - name: nss-softokn-freebl-cos6-x86_64
     path: nss-softokn-freebl-cos6-x86_64
 
