@@ -3,14 +3,14 @@ package:
   version: 2019c
 
 source:
-  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/tzdata-java-2019c-1.el7.noarch.rpm
+  - url: http://mirror.centos.org/altarch/7.8.2003/os/ppc64le/Packages/tzdata-java-2019c-1.el7.noarch.rpm
     sha256: ef0c0ac7183772b70ee519f5b9c4664f37edd34d991abe4bf3c267d88cc4c253
     no_hoist: true
     folder: binary
   - path: ../common_files
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   binary_relocation: false
   detect_binary_files_with_prefix: false
