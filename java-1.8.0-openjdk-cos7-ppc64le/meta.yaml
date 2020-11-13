@@ -3,7 +3,7 @@ package:
   version: 1.8.0.242
 
 source:
-  - url: http://mirror.centos.org/altarch/7/os/ppc64le/Packages/java-1.8.0-openjdk-1.8.0.242.b08-1.el7.ppc64le.rpm
+  - url: http://mirror.centos.org/altarch/7.8.2003/os/ppc64le/Packages/java-1.8.0-openjdk-1.8.0.242.b08-1.el7.ppc64le.rpm
     sha256: 3688da8f4ce18c99481d03f5f59bc1cad26b446bfabc64ef4373d579404526c7
     no_hoist: true
     folder: binary
