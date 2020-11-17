@@ -3,7 +3,7 @@ package:
   version: 3.0
 
 source:
-  - url:  {{ centos7_url }}/Packages/zip-3.0-11.el7.ppc64le.rpm
+  - url:  {{ centos7_url }}/zip-3.0-11.el7.ppc64le.rpm
     sha256: 6bc905954988220bcf792d60a8c3f92bb67bb55ac266f9815de7253cd610e214
     no_hoist: true
     folder: binary
