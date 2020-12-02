@@ -3,14 +3,14 @@ package:
   version: 2018e
 
 source:
-  - url: http://mirror.centos.org/centos-6/6/os/x86_64/Packages/tzdata-java-2018e-3.el6.noarch.rpm
+  - url: {{ centos6_url }}/tzdata-java-2018e-3.el6.noarch.rpm
     sha256: cb1e4abf1981101afc2a87b1a434068d65e5f2828846bbc051199fda58002bd6
     no_hoist: true
     folder: binary
   - path: ../common_files
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   binary_relocation: false
   detect_binary_files_with_prefix: false

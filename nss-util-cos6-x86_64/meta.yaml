@@ -3,14 +3,14 @@ package:
   version: 3.36.0
 
 source:
-  - url: http://mirror.centos.org/centos-6/6/os/x86_64/Packages/nss-util-3.36.0-1.el6.x86_64.rpm
+  - url: {{ centos6_url }}/nss-util-3.36.0-1.el6.x86_64.rpm
     sha256: 928a4ae279634a99963b4525a665c882431a50b9c5f28548572e8f00254f2d88
     no_hoist: true
     folder: binary
   - path: ../common_files
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   binary_relocation: false
   detect_binary_files_with_prefix: false

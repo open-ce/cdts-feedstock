@@ -3,14 +3,14 @@ package:
   version: 3.14.3
 
 source:
-  - url: http://mirror.centos.org/centos-6/6/os/x86_64/Packages/nss-softokn-3.14.3-23.3.el6_8.x86_64.rpm
+  - url: {{ centos6_url }}/nss-softokn-3.14.3-23.3.el6_8.x86_64.rpm
     sha256: 7e4298904daec41067f01c8943055560cd153d1f39c668c6d2fa978a3d66dd81
     no_hoist: true
     folder: binary
   - path: ../common_files
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   binary_relocation: false
   detect_binary_files_with_prefix: false
