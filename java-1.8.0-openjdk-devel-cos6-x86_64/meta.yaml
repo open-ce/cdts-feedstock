@@ -3,14 +3,14 @@ package:
   version: 1.8.0.171
 
 source:
-  - url: http://mirror.centos.org/centos-6/6/os/x86_64/Packages/java-1.8.0-openjdk-devel-1.8.0.171-8.b10.el6_9.x86_64.rpm
+  - url: {{ centos6_url }}/java-1.8.0-openjdk-devel-1.8.0.171-8.b10.el6_9.x86_64.rpm
     sha256: 8040a83ae91597474aac1bf0656e0198c9839843d3138034485984a8c2c5df61
     no_hoist: true
     folder: binary
   - path: ../common_files
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   binary_relocation: false
   detect_binary_files_with_prefix: false

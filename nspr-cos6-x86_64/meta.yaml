@@ -3,14 +3,14 @@ package:
   version: 4.19.0
 
 source:
-  - url: http://mirror.centos.org/centos-6/6/os/x86_64/Packages/nspr-4.19.0-1.el6.i686.rpm
+  - url: {{ centos6_url }}/nspr-4.19.0-1.el6.i686.rpm
     sha256: ab4b72a2833cc6cd1c15cde6c73ded3e6db8646868cbc62949c8478e1ef4bb11
     no_hoist: true
     folder: binary
   - path: ../common_files
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   binary_relocation: false
   detect_binary_files_with_prefix: false
