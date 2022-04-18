@@ -2,3 +2,5 @@ centos7_url:
   - https://vault.centos.org/altarch/7.8.2003/os/ppc64le/Packages/
 centos6_url:
   - https://vault.centos.org/6.10/os/x86_64/Packages/
+clefos7_url:
+  - http://download.sinenomine.net/clefos/7/os/

@@ -1,0 +1,38 @@
+package:
+  name: chkconfig-cos7-s390x
+  version: 1.7.6
+
+source:
+  - url: {{ clefos7_url }}/s390x/chkconfig-1.7.6-1.el7.s390x.rpm
+    sha256: cbda2cf28daf41a6a6adc0395cd6fd462d921c4a1b258668bd43a172335f62a8
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 2
+  noarch: generic
+  binary_relocation: False
+  detect_binary_files_with_prefix: False
+  missing_dso_whitelist:
+    - '*'
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: https://github.com/fedora-sysv/chkconfig
+  license: GPL-2.0-only
+  license_family: GPL2
+  summary: "(CDT) A system tool for maintaining the /etc/rc*.d hierarchy"
+  description: |
+        Chkconfig is a basic system utility.  It updates and queries runlevel
+        information for system services.  Chkconfig manipulates the numerous symbolic
+        links in /etc/rc.d, to relieve system administrators of some of the drudgery
+        of manually editing the symbolic links.
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
+
