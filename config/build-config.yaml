@@ -67,6 +67,3 @@ recipes:
 
  -  name: zip-cos7-s390x                              #[s390x]
     path: zip-cos7-s390x                              #[s390x]
-
- -  name: zip-cos7-s390x                              #[s390x]
-    path: zip-cos7-s390x                              #[s390x]

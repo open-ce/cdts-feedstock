@@ -10,7 +10,7 @@ source:
   - path: ../common_files
 
 build:
-  number: 3
+  number: 1
   noarch: generic
   binary_relocation: False
   detect_binary_files_with_prefix: False
