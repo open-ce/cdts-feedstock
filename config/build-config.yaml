@@ -46,3 +46,24 @@ recipes:
 
   - name: java-1.8.0-openjdk-devel-cos6-x86_64        #[x86_64]
     path: java-1.8.0-openjdk-devel-cos6-x86_64        #[x86_64]
+
+ -  name: tzdata-java-cos7-s390x                      #[s390x]
+    path: tzdata-java-cos7-s390x                      #[s390x]
+
+ -  name: chkconfig-cos7-s390x                        #[s390x]
+    path: chkconfig-cos7-s390x                        #[s390x]
+
+ -  name: copy-jdk-configs-cos7-s390x                 #[s390x]
+    path: copy-jdk-configs-cos7-s390x                 #[s390x]
+
+ -  name: java-1.8.0-openjdk-headless-cos7-s390x      #[s390x]
+    path: java-1.8.0-openjdk-headless-cos7-s390x      #[s390x]
+
+ -  name: java-1.8.0-openjdk-cos7-s390x               #[s390x]
+    path: java-1.8.0-openjdk-cos7-s390x               #[s390x]
+
+ -  name: java-1.8.0-openjdk-devel-cos7-s390x         #[s390x]
+    path: java-1.8.0-openjdk-devel-cos7-s390x         #[s390x]
+
+ -  name: zip-cos7-s390x                              #[s390x]
+    path: zip-cos7-s390x                              #[s390x]
