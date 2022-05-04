@@ -5,14 +5,14 @@ recipes:
   - name: tzdata-java-cos7-ppc64le                    #[ppc64le]
     path: tzdata-java-cos7-ppc64le                    #[ppc64le]
 
-  - name: java-1.8.0-openjdk-headless-cos7-ppc64le    #[ppc64le]
-    path: java-1.8.0-openjdk-headless-cos7-ppc64le    #[ppc64le]
+  - name: java-11-openjdk-headless-cos7-ppc64le       #[ppc64le]
+    path: java-11-openjdk-headless-cos7-ppc64le       #[ppc64le]
 
-  - name: java-1.8.0-openjdk-cos7-ppc64le             #[ppc64le]
-    path: java-1.8.0-openjdk-cos7-ppc64le             #[ppc64le]
+  - name: java-11-openjdk-cos7-ppc64le                #[ppc64le]
+    path: java-11-openjdk-cos7-ppc64le                #[ppc64le]
 
-  - name: java-1.8.0-openjdk-devel-cos7-ppc64le       #[ppc64le]
-    path: java-1.8.0-openjdk-devel-cos7-ppc64le       #[ppc64le]
+  - name: java-11-openjdk-devel-cos7-ppc64le          #[ppc64le]
+    path: java-11-openjdk-devel-cos7-ppc64le          #[ppc64le]
 
   - name: tzdata-java-cos6-x86_64                     #[x86_64]
     path: tzdata-java-cos6-x86_64                     #[x86_64]
