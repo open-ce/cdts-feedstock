@@ -3,7 +3,7 @@ package:
   version: 11.0.6.10
 
 source:
-  - url:  {{ centos7_url }}/java-11-openjdk-headless-11.0.6.10-3.el7.ppc64le.rpm
+  - url:  {{ ppc_url }}/java-11-openjdk-headless-11.0.6.10-3.el7.ppc64le.rpm
     sha256: c4c8838b4781cc80c121e44597dac1a213bc0bd0d93622f576f83d0ebfc14d88
     no_hoist: true
     folder: binary

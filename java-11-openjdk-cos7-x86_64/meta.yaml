@@ -1,10 +1,10 @@
 package:
-  name: java-11-openjdk-devel-cos7-ppc64le
-  version: 11.0.6.10
+  name: java-11-openjdk-cos7-x86_64
+  version: 11.0.8.10
 
 source:
-  - url:  {{ ppc_url }}/java-11-openjdk-devel-11.0.6.10-3.el7.ppc64le.rpm
-    sha256: 3983552dd6f3ddd76d957e5c81a0a5827df4974e2ceae3763c4182964a40ed7c
+  - url: {{ x86_url }}/java-11-openjdk-11.0.8.10-1.el7.x86_64.rpm
+    sha256: 4449bc448747b4e0f9b6a44e59e9ca524a3359a9b230dd4bfacb16fb96c13c68
     no_hoist: true
     folder: binary
   - path: ../common_files
@@ -19,14 +19,11 @@ build:
 
 requirements:
   build:
-    - java-11-openjdk-cos7-ppc64le ==11.0.6.10
-    - java-11-openjdk-headless-cos7-ppc64le ==11.0.6.10
+    - java-11-openjdk-headless-cos7-x86_64 ==11.0.8.10
   host:
-    - java-11-openjdk-cos7-ppc64le ==11.0.6.10
-    - java-11-openjdk-headless-cos7-ppc64le ==11.0.6.10
+    - java-11-openjdk-headless-cos7-x86_64 ==11.0.8.10
   run:
-    - java-11-openjdk-cos7-ppc64le ==11.0.6.10
-    - java-11-openjdk-headless-cos7-ppc64le ==11.0.6.10
+    - java-11-openjdk-headless-cos7-x86_64 ==11.0.8.10
 
 test:
   commands:
@@ -37,9 +34,9 @@ about:
   license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
   license_family: GPL2
   license_file: openjdk-license
-  summary: (CDT) OpenJDK Development Toolkit
+  summary: (CDT) OpenJDK Runtime Environment
   description: |
-    The OpenJDK Development Toolkit.
+    The OpenJDK runtime environment.
 
 extra:
   recipe-maintainers:

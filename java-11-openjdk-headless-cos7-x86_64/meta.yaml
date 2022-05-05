@@ -1,0 +1,58 @@
+package:
+  name: java-11-openjdk-headless-cos7-x86_64
+  version: 11.0.8.10
+
+source:
+  - url: {{ x86_url }}/java-11-openjdk-headless-11.0.8.10-1.el7.x86_64.rpm
+    sha256: e8397fa62a0fd827ff9643d856802bf48aadfc3d7777ef2faddeba4690a1ec29
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 1
+  noarch: generic
+  binary_relocation: False
+  detect_binary_files_with_prefix: False
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - chkconfig-cos7-x86_64 >=1.7.6
+    - copy-jdk-configs-cos7-x86_64 >=3.3
+    - nss-cos7-x86_64 >=3.44
+    - nss-softokn-cos7-x86_64 >=3.44
+    - tzdata-java-cos7-x86_64 >=2020a
+    - ca-certificates >=2022.4.26
+  host:
+    - chkconfig-cos7-x86_64 >=1.7.6
+    - copy-jdk-configs-cos7-x86_64 >=3.3
+    - nss-cos7-x86_64 >=3.44
+    - nss-softokn-cos7-x86_64 >=3.44
+    - tzdata-java-cos7-x86_64 >=2020a
+    - ca-certificates >=2022.4.26
+  run:
+    - chkconfig-cos7-x86_64 >=1.7.6
+    - copy-jdk-configs-cos7-x86_64 >=3.3
+    - nss-cos7-x86_64 >=3.44
+    - nss-softokn-cos7-x86_64 >=3.44
+    - tzdata-java-cos7-x86_64 >=2020a
+    - ca-certificates >=2022.4.26
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: http://openjdk.java.net/
+  license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
+  license_family: GPL2
+  license_file: openjdk-license
+  summary: "(CDT) The OpenJDK runtime environment without audio and video support"
+  description: |
+        The OpenJDK runtime environment without audio and video
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team

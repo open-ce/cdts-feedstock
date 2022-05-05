@@ -1,10 +1,10 @@
 package:
-  name: java-11-openjdk-cos7-ppc64le
-  version: 11.0.6.10
+  name: tzdata-java-cos7-x86_64
+  version: 2020a
 
 source:
-  - url: {{ ppc_url }}/java-11-openjdk-11.0.6.10-3.el7.ppc64le.rpm
-    sha256: 6273500d22beeb9dcadce072bf98fddec2af4bc361fe50d88ac658cf11f31b75
+  - url: {{ x86_url }}/tzdata-java-2020a-1.el7.noarch.rpm
+    sha256: df284a4379294602228b360243cb0fc0498371278b702354b9de2cc38ffbc09f
     no_hoist: true
     folder: binary
   - path: ../common_files
@@ -16,14 +16,6 @@ build:
   detect_binary_files_with_prefix: false
   missing_dso_whitelist:
     - '*'
-
-requirements:
-  build:
-    - java-11-openjdk-headless-cos7-ppc64le ==11.0.6.10
-  host:
-    - java-11-openjdk-headless-cos7-ppc64le ==11.0.6.10
-  run:
-    - java-11-openjdk-headless-cos7-ppc64le ==11.0.6.10
 
 test:
   commands:
@@ -41,4 +33,3 @@ about:
 extra:
   recipe-maintainers:
     - open-ce/open-ce-dev-team
-

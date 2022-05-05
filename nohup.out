@@ -1,0 +1,3 @@
+[OPEN-CE-INFO]Unable to find './open-ce/envs/bazel-env.yaml' locally. Attempting to use 'https://raw.githubusercontent.com/open-ce/open-ce/main/envs/./open-ce/envs/bazel-env.yaml'.
+[OPEN-CE-ERROR]-25 Failed to download https://raw.githubusercontent.com/open-ce/open-ce/main/envs/./open-ce/envs/conda_build_config.yaml with error:
+HTTP Error 404: Not Found

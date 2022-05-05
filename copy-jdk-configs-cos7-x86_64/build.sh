@@ -17,9 +17,8 @@
 
 source "${SRC_DIR}/build_cdt_package.sh"
 
-SYSROOT_DIR="${PREFIX}"/powerpc64le-conda_cos7-linux-gnu/sysroot/usr
+SYSROOT_DIR="${PREFIX}"/x86_64-conda_cos7-linux-gnu/sysroot
 
 pre_build
 
 post_build
-

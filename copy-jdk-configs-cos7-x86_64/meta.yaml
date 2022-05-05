@@ -1,0 +1,36 @@
+package:
+  name: copy-jdk-configs-cos7-x86_64
+  version: 3.3
+
+source:
+  - url: {{ x86_url }}/copy-jdk-configs-3.3-10.el7_5.noarch.rpm
+    sha256: 7b7ff9e72fe7a4b6c9e1aae52bdb913d2bb58ea86518e91e179a43acb93f21f8
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 3
+  noarch: generic
+  binary_relocation: False
+  detect_binary_files_with_prefix: False
+  missing_dso_whitelist:
+    - '*'
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: https://pagure.io/copy_jdk_configs
+  license: BSD
+  license_family: BSD
+  license_file: LICENSE
+  summary: "(CDT) JDKs configuration files copier"
+  description: |
+        Utility script to transfer JDKs configuration files between updates or for
+        archiving. With script to fix incorrectly created rpmnew files
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team

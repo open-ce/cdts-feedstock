@@ -1,0 +1,39 @@
+package:
+  name: nspr-cos7-x86_64
+  version: 4.21.0
+
+source:
+  - url: {{ x86_url }}/nspr-4.21.0-1.el7.x86_64.rpm
+    sha256: 87b51e45cfb1fb7e13f3c9ee00ca4326812c3daa69820634c8eff3c60890c928
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 1
+  noarch: generic
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  missing_dso_whitelist:
+    - '*'
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: http://www.mozilla.org/projects/nspr/
+  license: MPL-2.0
+  license_family: Other
+  license_file: nspr-license
+  summary: (CDT) Netscape Portable Runtime
+  description: |
+    NSPR provides platform independence for non-GUI operating system facilities.
+    These facilities include threads, thread synchronization, normal file and
+    network I/O, interval timing and calendar time, basic memory management
+    (malloc and free) and shared library linking.
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
+
