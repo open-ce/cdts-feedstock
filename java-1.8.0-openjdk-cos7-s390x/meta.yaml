@@ -1,0 +1,44 @@
+package:
+  name: java-1.8.0-openjdk-cos7-s390x
+  version: 1.8.0.262.b10 
+
+source:
+  - url: {{ clefos7_url }}/s390x/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.s390x.rpm
+    sha256: 50efe01e9d494e1b9dfcb7dd255f34dbbe72a4d40d592a6baa8e07ede6d12fbd
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 1
+  noarch: generic
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - java-1.8.0-openjdk-headless-cos7-s390x ==1.8.0.262.b10 
+  host:
+    - java-1.8.0-openjdk-headless-cos7-s390x ==1.8.0.262.b10 
+  run:
+    - java-1.8.0-openjdk-headless-cos7-s390x ==1.8.0.262.b10
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: http://openjdk.java.net/
+  license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
+  license_family: GPL2
+  license_file: openjdk-license
+  summary: (CDT) OpenJDK Runtime Environment
+  description: |
+    The OpenJDK runtime environment.
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
+
