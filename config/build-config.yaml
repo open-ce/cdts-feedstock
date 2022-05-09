@@ -1,7 +1,4 @@
 recipes:
-  - name: zip-cos7-ppc64le                            #[ppc64le]
-    path: zip-cos7-ppc64le                            #[ppc64le]
-
   - name: tzdata-java-cos7-ppc64le                    #[ppc64le]
     path: tzdata-java-cos7-ppc64le                    #[ppc64le]
 
