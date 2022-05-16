@@ -1,0 +1,44 @@
+package:
+  name: java-11-openjdk-cos7-x86_64
+  version: 11.0.8.10
+
+source:
+  - url: {{ x86_url }}/java-11-openjdk-11.0.8.10-1.el7.x86_64.rpm
+    sha256: 4449bc448747b4e0f9b6a44e59e9ca524a3359a9b230dd4bfacb16fb96c13c68
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 1
+  noarch: generic
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  missing_dso_whitelist:
+    - '*'
+
+requirements:
+  build:
+    - java-11-openjdk-headless-cos7-x86_64 ==11.0.8.10
+  host:
+    - java-11-openjdk-headless-cos7-x86_64 ==11.0.8.10
+  run:
+    - java-11-openjdk-headless-cos7-x86_64 ==11.0.8.10
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: http://openjdk.java.net/
+  license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
+  license_family: GPL2
+  license_file: openjdk-license
+  summary: (CDT) OpenJDK Runtime Environment
+  description: |
+    The OpenJDK runtime environment.
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
+

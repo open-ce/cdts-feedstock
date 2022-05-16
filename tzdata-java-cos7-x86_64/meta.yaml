@@ -1,0 +1,35 @@
+package:
+  name: tzdata-java-cos7-x86_64
+  version: 2020a
+
+source:
+  - url: {{ x86_url }}/tzdata-java-2020a-1.el7.noarch.rpm
+    sha256: df284a4379294602228b360243cb0fc0498371278b702354b9de2cc38ffbc09f
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 1
+  noarch: generic
+  binary_relocation: false
+  detect_binary_files_with_prefix: false
+  missing_dso_whitelist:
+    - '*'
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: http://openjdk.java.net/
+  license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
+  license_family: GPL2
+  license_file: openjdk-license
+  summary: (CDT) OpenJDK Runtime Environment
+  description: |
+    The OpenJDK runtime environment.
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team

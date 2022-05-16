@@ -1,0 +1,39 @@
+package:
+  name: chkconfig-cos7-x86_64
+  version: 1.7.6
+
+source:
+  - url: {{ x86_url }}/chkconfig-1.7.6-1.el7.x86_64.rpm
+    sha256: 646df8aeff8fdbd206070c2cd91bdb50003035c9925d0605c52a80cc081c38dc
+    no_hoist: true
+    folder: binary
+  - path: ../common_files
+
+build:
+  number: 1
+  noarch: generic
+  binary_relocation: False
+  detect_binary_files_with_prefix: False
+  missing_dso_whitelist:
+    - '*'
+
+test:
+  commands:
+    - echo "it installs!"
+
+about:
+  home: https://github.com/fedora-sysv/chkconfig
+  license: GPL-2.0-only
+  license_family: GPL2
+  license_file: {{ SRC_DIR }}/binary/usr/share/licenses/chkconfig-1.7.6/COPYING
+  summary: "(CDT) A system tool for maintaining the /etc/rc*.d hierarchy"
+  description: |
+        Chkconfig is a basic system utility.  It updates and queries runlevel
+        information for system services.  Chkconfig manipulates the numerous symbolic
+        links in /etc/rc.d, to relieve system administrators of some of the drudgery
+        of manually editing the symbolic links.
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
+
