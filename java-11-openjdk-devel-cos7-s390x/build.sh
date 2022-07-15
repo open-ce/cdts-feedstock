@@ -21,5 +21,18 @@ SYSROOT_DIR="${PREFIX}"/s390x-conda_cos7-linux-gnu/sysroot/usr
 
 pre_build
 
+# START OF INSERTED BUILD APPENDS
+
+jvm_slug=$(compgen -G "${SYSROOT_DIR}/lib/jvm/java-11-openjdk-*")
+jvm_slug=$(basename ${jvm_slug})
+
+# Fix broken links
+pushd ${SYSROOT_DIR}/share/systemtap/tapset/s390 > /dev/null 2>&1
+rm -rf *.stp
+ln -s ${SYSROOT_DIR}/lib/jvm/${jvm_slug}/tapset/*.stp ${SYSROOT_DIR}/share/systemtap/tapset/s390/
+popd > /dev/null 2>&1
+
+# END OF INSERTED BUILD APPENDS
+
 post_build
 

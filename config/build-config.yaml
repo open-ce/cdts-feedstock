@@ -53,14 +53,14 @@ recipes:
  -  name: copy-jdk-configs-cos7-s390x                 #[s390x]
     path: copy-jdk-configs-cos7-s390x                 #[s390x]
 
- -  name: java-1.8.0-openjdk-headless-cos7-s390x      #[s390x]
-    path: java-1.8.0-openjdk-headless-cos7-s390x      #[s390x]
+ -  name: java-11-openjdk-headless-cos7-s390x         #[s390x]
+    path: java-11-openjdk-headless-cos7-s390x         #[s390x]
 
- -  name: java-1.8.0-openjdk-cos7-s390x               #[s390x]
-    path: java-1.8.0-openjdk-cos7-s390x               #[s390x]
+ -  name: java-11-openjdk-cos7-s390x                  #[s390x]
+    path: java-11-openjdk-cos7-s390x                  #[s390x]
 
- -  name: java-1.8.0-openjdk-devel-cos7-s390x         #[s390x]
-    path: java-1.8.0-openjdk-devel-cos7-s390x         #[s390x]
+ -  name: java-11-openjdk-devel-cos7-s390x            #[s390x]
+    path: java-11-openjdk-devel-cos7-s390x            #[s390x]
 
  -  name: zip-cos7-s390x                              #[s390x]
     path: zip-cos7-s390x                              #[s390x]

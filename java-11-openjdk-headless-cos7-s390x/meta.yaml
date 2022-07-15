@@ -1,10 +1,10 @@
 package:
-  name: java-1.8.0-openjdk-headless-cos7-s390x
-  version: 1.8.0.262.b10
+  name: java-11-openjdk-headless-cos7-s390x
+  version: 11.0.8.10
 
 source:
-  - url: {{ clefos7_url }}/s390x/java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.s390x.rpm
-    sha256: 204d76ee22611eb7e6e3bff7675ba47b2fe393436967779ed7bf73a9f78522a4
+  - url: {{ clefos7_url }}/s390x/java-11-openjdk-headless-11.0.8.10-1.el7.s390x.rpm
+    sha256: 9f84c23caac159789fb5df6d1d5df28fee3de486dd5171e6dddd8c27e66632b1
     no_hoist: true
     folder: binary
   - path: ../common_files
