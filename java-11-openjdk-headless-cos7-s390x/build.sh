@@ -23,15 +23,14 @@ pre_build
 
 # START OF INSERTED BUILD APPENDS
 
-jvm_slug=$(compgen -G "${SYSROOT_DIR}/lib/jvm/java-1.8.0-openjdk-*")
+jvm_slug=$(compgen -G "${SYSROOT_DIR}/lib/jvm/java-11-openjdk-*")
 jvm_slug=$(basename ${jvm_slug})
 
 # Fix broken links
-pushd ${SYSROOT_DIR}/lib/jvm/${jvm_slug}/jre/lib > /dev/null 2>&1
+pushd ${SYSROOT_DIR}/lib/jvm/${jvm_slug}/lib > /dev/null 2>&1
 rm -rf tzdb.dat
-ln -s ${SYSROOT_DIR}/share/javazi-1.8/tzdb.dat ${SYSROOT_DIR}/lib/jvm/${jvm_slug}/jre/lib
+ln -s ${SYSROOT_DIR}/share/javazi-1.8/tzdb.dat ${SYSROOT_DIR}/lib/jvm/${jvm_slug}/lib
 popd > /dev/null 2>&1
-
 
 # END OF INSERTED BUILD APPENDS
 

@@ -1,10 +1,10 @@
 package:
-  name: java-1.8.0-openjdk-cos7-s390x
-  version: 1.8.0.262.b10 
+  name: java-11-openjdk-devel-cos7-s390x
+  version: 11.0.8.10
 
 source:
-  - url: {{ clefos7_url }}/s390x/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.s390x.rpm
-    sha256: 50efe01e9d494e1b9dfcb7dd255f34dbbe72a4d40d592a6baa8e07ede6d12fbd
+  - url: {{ clefos7_url }}/s390x/java-11-openjdk-devel-11.0.8.10-1.el7.s390x.rpm
+    sha256: 85391f0e39d4e2e66337fe860e08aa8289bbcedaef8ff0675ddc5fa1f834059d
     no_hoist: true
     folder: binary
   - path: ../common_files
@@ -19,11 +19,14 @@ build:
 
 requirements:
   build:
-    - java-1.8.0-openjdk-headless-cos7-s390x ==1.8.0.262.b10 
+    - java-11-openjdk-cos7-s390x          ==11.0.8.10
+    - java-11-openjdk-headless-cos7-s390x ==11.0.8.10
   host:
-    - java-1.8.0-openjdk-headless-cos7-s390x ==1.8.0.262.b10 
+    - java-11-openjdk-cos7-s390x          ==11.0.8.10
+    - java-11-openjdk-headless-cos7-s390x ==11.0.8.10
   run:
-    - java-1.8.0-openjdk-headless-cos7-s390x ==1.8.0.262.b10
+    - java-11-openjdk-cos7-s390x          ==11.0.8.10
+    - java-11-openjdk-headless-cos7-s390x ==11.0.8.10
 
 test:
   commands:
@@ -34,9 +37,9 @@ about:
   license: ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv1.1 and MPLv2.0 and Public Domain and W3C and zlib
   license_family: GPL2
   license_file: openjdk-license
-  summary: (CDT) OpenJDK Runtime Environment
+  summary: (CDT) OpenJDK Development Toolkit
   description: |
-    The OpenJDK runtime environment.
+    The OpenJDK Development Toolkit.
 
 extra:
   recipe-maintainers:
