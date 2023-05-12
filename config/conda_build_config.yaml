@@ -3,4 +3,4 @@ ppc_url:
 x86_url:
   - https://rpmfind.net/linux/centos/7.9.2009/os/x86_64/Packages
 clefos7_url:
-  - http://download.sinenomine.net/clefos/7/os/
+  - https://download.sinenomine.net/clefos/7/os/
