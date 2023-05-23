@@ -3,14 +3,14 @@ package:
   version: 1.8.0.262.b10
 
 source:
-  - url: http://download.sinenomine.net/clefos/7/os/s390x/java-1.8.0-openjdk-devel-1.8.0.262.b10-1.el7.s390x.rpm
+  - url: https://download.sinenomine.net/clefos/7/os/s390x/java-1.8.0-openjdk-devel-1.8.0.262.b10-1.el7.s390x.rpm
     sha256: 7f0ee7bc39ea62d0e9a7375719870289e85181228b65949cbebc0db0a8cc9c39
     no_hoist: true
     folder: binary
   - path: ../common_files
 
 build:
-  number: 1
+  number: 2
   noarch: generic
   binary_relocation: false
   detect_binary_files_with_prefix: false
