@@ -3,4 +3,4 @@ centos7_url:
 centos6_url:
   - https://vault.centos.org/6.10/os/x86_64/Packages/
 clefos7_url:
-  - http://download.sinenomine.net/clefos/7/os/
+  - https://download.sinenomine.net/clefos/7/os/
